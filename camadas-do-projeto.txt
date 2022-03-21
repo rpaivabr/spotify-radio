@@ -1,0 +1,18 @@
+server
+  service = tudo que é regra de negocio ou processamento
+  controller = intermediar a camada de apresentação e a camada de negocio
+  routes = camada de apresentacao
+  server = responsavel por criar o servidor (mas não instancia)
+  index = instancia o servidor e expoe para a web (lado da infra)
+  config = tudo que for estático do projeto
+
+client
+  service = tudo que é regra de negocio ou processamento  
+  controller = é o intermedio entre a view e o service
+  view = tudo que é elemento html (visualizacao)
+  index = factory = quem inicia tudo
+
+# docker ps
+# docker exec -it 50ca9d983ae8 bash
+# apt list --installed
+# curl -i -X POST localhost:3000/controller -d '{"command": "start"}'

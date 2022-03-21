@@ -5,6 +5,7 @@ function $(id) {
 const media = document.getElementById("audio");
 
 const ui = {
+  mute: "mute",
   play: "playAudio",
   audio: "audio",
   percentage: "percentage",
@@ -20,6 +21,16 @@ function togglePlay() {
   } else {
     media.play();
     $(ui.play).classList.add("pause");
+  }
+}
+
+function toggleMute() {
+  if (!media.muted) {
+    media.muted = true;
+    $(ui.mute).classList.add("muted");
+  } else {
+    media.muted = false;
+    $(ui.mute).classList.remove("muted");
   }
 }
 
@@ -60,4 +71,5 @@ function initProgressBar() {
 }
 
 $(ui.play).addEventListener("click", togglePlay);
+$(ui.mute).addEventListener("click", toggleMute);
 $(ui.audio).addEventListener("timeupdate", initProgressBar);

@@ -350,6 +350,21 @@ body {
     center;
   background-size: contain;
 }
+.audio-player #mute {
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background: url("https://img.icons8.com/FFFFFF/mute") no-repeat
+    center;
+  background-size: contain;
+}
+.audio-player #mute.muted {
+  background: url("https://img.icons8.com/00FFFF/mute") no-repeat center;
+  background-size: contain;
+}
 .player-controls-row {
   display: flex;
   align-items: center;
